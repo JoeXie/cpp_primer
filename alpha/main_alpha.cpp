@@ -103,9 +103,21 @@ ostream & print(ostream &os, StrBlob & strb)
 
 int main(int argc, char *argv[])
 {
-    char *s1 = "Hello World",
-        *s2 = "C++ Primer";
+    allocator<string> alloc;
+    auto p = alloc.allocate(10);
+    string *q = p;
+    string str;
+    while (cin >> str && q != p + 10) {
+        alloc.construct(q++, str);
+    }
+
+    size_t size = q - p;
+    cout << "size: " << size << endl;
     
+    for (string *it = p; it != q; ++it) {
+        cout << *it << "\n";
+    }
+    cout << endl;
 
 
 

@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F60DE2E0-FADC-4C03-AAFE-CB15FA75DDFD}</ProjectGuid>
-    <RootNamespace>alpha</RootNamespace>
+    <ProjectGuid>{2424F074-A338-4B1F-BCFE-8F8C8D6905BA}</ProjectGuid>
+    <RootNamespace>text_query_program</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -64,22 +64,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="functions.cpp" />
-    <ClCompile Include="main_alpha.cpp" />
-    <ClCompile Include="MyQueryResult.cpp" />
-    <ClCompile Include="Person.cpp" />
-    <ClCompile Include="Sales_data.cpp" />
-    <ClCompile Include="Screen.cpp" />
-    <ClCompile Include="StrBlob.cpp" />
-    <ClCompile Include="StrBlobPtr.cpp" />
+    <ClCompile Include="main_text_query_program.cpp" />
+    <ClCompile Include="MyTextQuery.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyQueryResult.h" />
-    <ClInclude Include="Person.h" />
-    <ClInclude Include="Sales_data.h" />
-    <ClInclude Include="Screen.h" />
-    <ClInclude Include="StrBlob.h" />
-    <ClInclude Include="StrBlobPtr.h" />
+    <ClInclude Include="MyTextQuery.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
