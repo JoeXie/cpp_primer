@@ -11,7 +11,7 @@ MyTextQuery::MyTextQuery(ifstream &inflie_path)
 
 MyQueryResult  MyTextQuery::query(const string &infile)
 {
-
+    return MyQueryResult();
 }
 
 /***************************

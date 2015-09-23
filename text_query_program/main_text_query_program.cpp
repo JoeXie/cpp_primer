@@ -4,13 +4,13 @@
 #include <string>
 #include <map>
 #include <set>
-#include "MyTextQuery.h"
+#include "TextQuery.h"
 
 using namespace std;
 
-void myRunQueries(ifstream &infile)
+void runQueries(ifstream &infile)
 {
-    MyTextQuery tq(infile);
+    TextQuery tq(infile);
     while (true) {
         cout << "enter word to look for, or q to quit: ";
         string s;
@@ -19,4 +19,16 @@ void myRunQueries(ifstream &infile)
         // print result.
         print(cout, tq.query(s)) << endl;
     }
+}
+
+int main(int argc, char* argv[])
+{
+    ifstream inf("../../infile.txt");
+    if (inf)
+        runQueries(inf);
+    else
+        cout << "file open failed." << endl;
+
+    system("pause");
+    return 0;
 }

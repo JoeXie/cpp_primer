@@ -66,9 +66,11 @@
   <ItemGroup>
     <ClCompile Include="main_text_query_program.cpp" />
     <ClCompile Include="MyTextQuery.cpp" />
+    <ClCompile Include="TextQuery.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyTextQuery.h" />
+    <ClInclude Include="TextQuery.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

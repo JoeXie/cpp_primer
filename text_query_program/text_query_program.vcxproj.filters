@@ -21,9 +21,15 @@
     <ClCompile Include="MyTextQuery.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TextQuery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyTextQuery.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextQuery.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -18,6 +18,8 @@ public:
     MyTextQuery(std::ifstream &infile_path);
     MyQueryResult query(const std::string &infile);
 
+private:
+
 
 };
 
@@ -31,5 +33,5 @@ public:
 };
 
 
-// function interfaces.
-ostream & print(std::ostream &os, MyQueryResult qresult);
+// interface functions.
+std::ostream & print(std::ostream &os, MyQueryResult qresult);
