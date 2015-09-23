@@ -103,10 +103,6 @@ ostream & print(ostream &os, StrBlob & strb)
 
 int main(int argc, char *argv[])
 {
-    char *s1 = "Hello World",
-        *s2 = "C++ Primer";
-    
-
 
 
 
