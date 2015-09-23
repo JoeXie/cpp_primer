@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <sstream>
 #include <fstream>
 #include <vector>
@@ -94,18 +95,18 @@ istream & readline(istream &is, StrBlob & strb)
 ostream & print(ostream &os, StrBlob & strb)
 {
     StrBlobPtr strbPtr = strb.begin();
-    for (int i = 0; i < strb.size(); strbPtr.incr()) {
-        os << strbPtr.deref() << "  ";
+    for (int i = 0; i < strb.size(); strbPtr.incr(), ++i) {
+        os << strbPtr.deref() << "\n";
     }
     return os;
 }
 
 int main(int argc, char *argv[])
 {
-    StrBlob strBlob;
-    while (readline(cin, strBlob));
+    char *s1 = "Hello World",
+        *s2 = "C++ Primer";
     
-    print(cout, strBlob) << endl;
+
 
 
 

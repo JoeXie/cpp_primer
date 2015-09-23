@@ -8,6 +8,7 @@ define a class to test samrt pointer.
 #include <string>
 
 class StrBlob; // forward declaration
+
 /************************************
 class StrBlobPtr
 ************************************/
@@ -15,7 +16,7 @@ class StrBlobPtr
 {
 public:
     StrBlobPtr() :curr(0) {}
-    StrBlobPtr(StrBlob &a, size_t sz);
+    StrBlobPtr(StrBlob &a, size_t sz = 0);
     std::string& deref() const;
     StrBlobPtr& incr();
 
@@ -45,15 +46,24 @@ public:
     const std::string &back() const;
     std::string &back();
 
-    StrBlobPtr begin() { return StrBlobPtr(*this); }
-    StrBlobPtr end()
-    {
-        auto ret = StrBlobPtr(*this, data->size());
-        return ret;
-    }
+    StrBlobPtr begin();
+    StrBlobPtr end();
 
 private:
     std::shared_ptr<std::vector<std::string>> data;
     void check(size_type i, const std::string &msg) const;
 };
 
+/************************************
+StrBlob inline functions.
+************************************/
+inline StrBlobPtr StrBlob::begin() 
+{ 
+    return StrBlobPtr(*this); 
+}
+
+inline StrBlobPtr StrBlob::end()
+{
+    auto ret = StrBlobPtr(*this, data->size());
+    return ret;
+}

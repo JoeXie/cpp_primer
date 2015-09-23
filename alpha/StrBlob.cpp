@@ -49,7 +49,7 @@ void StrBlob::pop_back()
 /********************************
 define class StrBolbPtr
 *********************************/
-StrBlobPtr::StrBlobPtr(StrBlob &a, size_t sz = 0) : wptr(a.data), curr(sz) {}
+StrBlobPtr::StrBlobPtr(StrBlob &a, size_t sz) : wptr(a.data), curr(sz) {}
 
 std::shared_ptr<std::vector<std::string>>
 StrBlobPtr::check(std::size_t i, const std::string &msg) const
